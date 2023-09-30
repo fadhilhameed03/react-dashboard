@@ -14,6 +14,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     padding: 25px 15px;
     background-color: rgba(255, 255, 255, 0.337);
@@ -21,9 +23,29 @@
     margin-bottom: 10px;
 }
 
+.navigation header::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.471);
+    bottom: 0;
+}
+
 .navigation header .profile {
     height: 50px;
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: lightgray;
+}
+
+.profile-img {
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navigation header span {
+    font-size: 15px;
 }
