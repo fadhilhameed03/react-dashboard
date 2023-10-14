@@ -5,8 +5,8 @@
     flex-direction: column;
     width: 20%;
     min-height: 100vh;
-    color: white;
-    background: linear-gradient(10deg, #810551, #05454d);
+    color: rgba(255, 255, 255, 0.529);
+    background: linear-gradient(10deg, #ff220081, #1a1e4e);
     padding: 5px 10px;
     overflow: hidden;
 }
@@ -98,7 +98,7 @@
     margin: 0 auto;
     height: 1px;
     width: 80%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.377);
 }
 
 .navigation.bg-waves {

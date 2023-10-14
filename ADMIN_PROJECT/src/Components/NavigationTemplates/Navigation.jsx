@@ -1,4 +1,4 @@
-import Nav from './NaviconTemplate/nav';
+import Nav from './NaviconTemplate/Nav';
 import './Navigation.css'
 import {TbDashboard,TbFileUpload,TbArrowsExchange} from 'react-icons/tb';
 import {FiChevronLeft,FiMessageSquare} from 'react-icons/fi';
@@ -7,15 +7,16 @@ import {AiOutlineUsergroupAdd,AiOutlineUserSwitch} from 'react-icons/ai';
 import {MdOutlineNotificationsActive} from 'react-icons/md';
 import {RiAccountCircleLine} from 'react-icons/ri';
 import {BiMessageAltAdd,BiDotsHorizontalRounded} from 'react-icons/bi';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 const Navigation = () => {
 
     const[nav,setnsv] =useState(false);
 
+    const{DarkTheme, setDarkTheme} = useContext(Themecontext)
+
 
   return  <div className = {'navigation ${nav && "active"}'}>
-
     <div className={'menu ${nav && "active"}'} onClick={() => {
       setInterval((prevState) => !prevState)
     }}>
@@ -34,7 +35,7 @@ const Navigation = () => {
     <Nav Icon={FiMessageSquare} title={"Message"} />
     <Nav Icon={AiOutlineUsergroupAdd} title={"Followers"} />
 
-    <div className="divider"></div>
+    <div className="divider" />
 
     <Nav Icon={MdOutlineNotificationsActive} title={"Notification"} />
     <Nav Icon={RiAccountCircleLine} title={"Following"} />
@@ -43,7 +44,7 @@ const Navigation = () => {
     <Nav Icon={BiMessageAltAdd} title={"Message Requests"} />
     <Nav Icon={AiOutlineUserSwitch} title={"Change Account"} />
 
-    <div className="divider"></div>
+    <div className="divider" />
 
     <Nav Icon={TbArrowsExchange} title="change Theme"/>
     <Nav Icon={BiDotsHorizontalRounded} title={"More Details"}/>
